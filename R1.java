@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+ class R1 {
+          void function( int i, int n){
+if (i>n) {
+    return;}
+System.out.println(i);
+    function(1,n);
+};
+    
+
+void function1( int i ,int n){
+if (i<1) {
+    return;
+}
+System.out.println(i);
+function1(i-1, n);
+
+
+};
+
+void function2(int i,int n){
+if (i<1) {
+    return;
+}
+
+function2(i-1, n);
+System.out.println(i);// print i after recursion 
+// everything especially output is same but inside program everything change.
+// function2(i-1,n)  is only be executed if base case is true and that become true at last and at
+// last and at once become  true,then print will be executed.
+// by writng  print (i) after rrecursion this is how you go opposite of what you done earlier
+// this is called backtacking .
+};
+
+
+    public static void main(String[] args) {
+   Scanner sc= new Scanner(System.in);
+   int n =sc.nextInt();
+System.out.println("enter a number to which you want to print your name ");
+
+ R1 obj = new R1();   // create object
+       obj.function(1, n); 
+
+        obj.function1(n, n);
+        obj.function2(n, n);
+        }
+    }
+    
+    
+
